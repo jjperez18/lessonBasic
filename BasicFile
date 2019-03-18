@@ -1,0 +1,72 @@
+<html>
+<head>
+<title> </title>
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+</head>
+<body>
+<canvas id="gc" width="1000" height="600" tabindex="0" oncontextmenu="return false;">
+</canvas>
+
+<script src="http://physicsng.1apps.com/code/g/gridN.html" type="text/javascript"></script>
+
+<script>
+
+window.onload=function()
+{
+  k=document.getElementById('gc');
+  cc=k.getContext('2d');
+  initialize();
+  gridV = 0;
+  setInterval(update,1000/30);
+  k.addEventListener('click',function(e)
+                     { XClick = e.clientX-k.offsetLeft; YClick = e.clientY-k.offsetTop; }, false );  
+  k.addEventListener('mousemove', function(e)
+                     { XMove = e.x-k.offsetLeft; YMove = e.y-k.offsetTop; }, false);
+  window.addEventListener('mousedown', mouseDown,true);
+  window.addEventListener('mouseup', mouseUp,true);
+  window.addEventListener('keydown',keyDown2,true);
+  window.addEventListener('keyup',keyUp,true);
+}
+
+function update()
+{
+  cc.fillStyle='black';
+  cc.fillRect(3,3,k.width-6,k.height-6);
+  cc.fillStyle='darkslategrey';
+  repeatingForever2();
+  cc.lineWidth = 3;
+  cc.strokeStyle='blue';
+  cc.strokeRect(1,1,k.width-2,k.height-2);
+}
+
+function keyUp(e)  {}
+function mouseDown(e)  {}
+function mouseUp(e)  {}
+
+function keyDown(e)
+{ 
+
+
+}
+
+function initialize()
+{
+
+
+}
+
+function repeatingForever()
+{
+
+
+
+
+
+}
+
+
+
+</script>
+</body>
+</html>
